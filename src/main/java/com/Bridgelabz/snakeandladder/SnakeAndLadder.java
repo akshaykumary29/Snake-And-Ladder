@@ -1,6 +1,5 @@
 package com.Bridgelabz.snakeandladder;
 
-
 /**
  * Snake And Ladder Simulator
  */
@@ -13,11 +12,13 @@ public class SnakeAndLadder {
         int IS_SNAKE = 1;
         int IS_LADDER = 2;
         int WINNING_POSITION = 100;
+        int diceCount = 0;
         int position = INITIAL_POSITION;
 
         System.out.println("Welcome to Snake And Ladder Game!!!");
 
         while (position < WINNING_POSITION) {
+            diceCount++;
 
             int rollDie = (int) (Math.floor(Math.random() * 10) % 6 + 1);
 
@@ -42,6 +43,7 @@ public class SnakeAndLadder {
                 System.out.println("No Play for Player");
             }
             System.out.println("Dice: " + rollDie);
+            System.out.println("Dice count: " + diceCount);
             System.out.println("Position: " + position);
 
         }
